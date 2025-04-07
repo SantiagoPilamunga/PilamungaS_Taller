@@ -17,8 +17,23 @@ namespace PilamungaS_Taller.Repositorios
                 PartidosEmpatados = 0,
                 PartidosPerdidos = 0
             };
+
+
+            Equipo bsc = new Equipo
+            {
+                Id = 1,
+                Nombre = "Liga de quito",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            equipos.Add(bsc);
             equipos.Add(ldu);
             return equipos;
         }
+
+
     }
 }
+

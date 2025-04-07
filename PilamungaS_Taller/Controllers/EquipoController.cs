@@ -17,6 +17,8 @@ namespace PilamungaS_Taller.Controllers
         {
             EquipoRepository repository = new EquipoRepository();
             var equipos = repository.DevuleveListadoEquipos();
+            equipos=equipos.OrderByDescending(item => item.PartidosGanados);
+            //equipos = equipos.Where(item => item.Nombre == "Liga de quito");
             return View(equipos);
         }
 
