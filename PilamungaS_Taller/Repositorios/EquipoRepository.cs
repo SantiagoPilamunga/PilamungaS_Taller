@@ -4,7 +4,12 @@ namespace PilamungaS_Taller.Repositorios
 {
     public class EquipoRepository
     {
-        public IEnumerable<Equipo> DevuleveListadoEquipos()
+        public IEnumerable<Equipo> Equipos;
+        public EquipoRepository()
+        {
+            Equipos = DevuelveListadoEquipos();
+        }
+        public IEnumerable<Equipo> DevuelveListadoEquipos()
         {
             List<Equipo> equipos = new List<Equipo>();
 
@@ -21,7 +26,7 @@ namespace PilamungaS_Taller.Repositorios
 
             Equipo bsc = new Equipo
             {
-                Id = 1,
+                Id = 2,
                 Nombre = "Liga de quito",
                 PartidosJugados = 10,
                 PartidosGanados = 8,
@@ -33,7 +38,18 @@ namespace PilamungaS_Taller.Repositorios
             return equipos;
         }
 
+        public Equipo DevuelveEquipoPorId(int Id)
+        {
+            var equipos = DevuelveListadoEquipos();
+            var equipo= equipos.First(IThreadPoolWorkItem=> IThreadPoolWorkItem.Id == Id);
+            return equipo;
+        }
 
+        public bool ActualizarEquipo(int Id,Equipo equipo)
+        {
+            //logica de actualizacion
+            return true;
+        }
     }
 }
 

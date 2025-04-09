@@ -5,9 +5,16 @@ using PilamungaS_Taller.Repositorios;
 
 namespace PilamungaS_Taller.Controllers
 {
+    
+
     public class EquipoController : Controller
     {
-
+        
+        public EquipoRepository _repository;
+        public EquipoController()
+        {
+            _repository = new EquipoRepository();
+        }
         public ActionResult View()
         {
             return View();
@@ -15,13 +22,41 @@ namespace PilamungaS_Taller.Controllers
 
         public ActionResult List()
         {
-            EquipoRepository repository = new EquipoRepository();
-            var equipos = repository.DevuleveListadoEquipos();
+            
+            var equipos = _repository.DevuelveListadoEquipos();
             equipos=equipos.OrderByDescending(item => item.PartidosGanados);
             //equipos = equipos.Where(item => item.Nombre == "Liga de quito");
             return View(equipos);
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
 
+        
+        public ActionResult Edit(int Id)
+        {
+            
+            Equipo equipo = _repository.DevuelveEquipoPorId(Id);
+            return View(equipo);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int Id,Equipo equipo)
+        {
+            //Proceso de guardar
+            try
+            {
+                EquipoRepository repository = new EquipoRepository();
+                repository.ActualizarEquipo(Id, equipo);
+                return RedirectToAction(nameof(List));
+            }
+            catch
+            {
+                return View();
+            }
+
+        }
     }
 }
