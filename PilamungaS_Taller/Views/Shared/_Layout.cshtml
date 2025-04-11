@@ -23,9 +23,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Equipo" asp-action="List">Equipos</a>
                         </li>
                     </ul>
@@ -39,9 +36,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - PilamungaS_Taller - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer text-muted" style="max-height: 1cm;">
+        <div class="container d-flex flex-column justify-content-center h-100" style="line-height: 1.2;">
+            <p>&copy; 2025 - PilamungaS_Taller</p>
+            <p>Santiago Pilamunga - Ingenieria Software</p>
+            <p>Soy una persona tranquila que le gusta jugar videojuegos, actualmete curso el 5° semestre en la UDLA </p>
+            <p>Soy de Riobamba, cada cierto tiempo viajo allá</p>
+            <a asp-area="" asp-controller="Home"> </a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

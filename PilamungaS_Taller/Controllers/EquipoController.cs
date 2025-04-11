@@ -45,17 +45,9 @@ namespace PilamungaS_Taller.Controllers
         [HttpPost]
         public ActionResult Edit(int Id,Equipo equipo)
         {
-            //Proceso de guardar
-            try
-            {
-                EquipoRepository repository = new EquipoRepository();
-                repository.ActualizarEquipo(Id, equipo);
-                return RedirectToAction(nameof(List));
-            }
-            catch
-            {
-                return View();
-            }
+
+            _repository.ActualizarEquipo(Id, equipo);
+            return RedirectToAction(nameof(List));
 
         }
     }

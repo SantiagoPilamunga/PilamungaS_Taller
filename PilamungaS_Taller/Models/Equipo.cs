@@ -20,5 +20,6 @@ namespace PilamungaS_Taller.Models
         [Range(0, 100)]
         public int PartidosPerdidos { get; set; }
 
+
     }
 }

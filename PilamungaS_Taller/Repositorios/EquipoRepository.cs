@@ -1,4 +1,5 @@
-﻿using PilamungaS_Taller.Models;
+﻿using Microsoft.AspNetCore.Razor.Language.Intermediate;
+using PilamungaS_Taller.Models;
 
 namespace PilamungaS_Taller.Repositorios
 {
@@ -27,7 +28,134 @@ namespace PilamungaS_Taller.Repositorios
             Equipo bsc = new Equipo
             {
                 Id = 2,
-                Nombre = "Liga de quito",
+                Nombre = "Barcelona",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+
+            Equipo cnb = new Equipo
+            {
+                Id = 3,
+                Nombre = "Cuniburo",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo uct = new Equipo
+            {
+                Id = 4,
+                Nombre = "U.Catolica",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo inv = new Equipo
+            {
+                Id = 5,
+                Nombre = "Independiente",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo lbt = new Equipo
+            {
+                Id = 6,
+                Nombre = "Libertad",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo dcu = new Equipo
+            {
+                Id = 7,
+                Nombre = "Dep.Cuenca",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo orn = new Equipo
+            {
+                Id = 8,
+                Nombre = "Orense",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo msr = new Equipo
+            {
+                Id = 9,
+                Nombre = "MushucRuna",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo auc = new Equipo
+            {
+                Id = 10,
+                Nombre = "Aucas",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo mca = new Equipo
+            {
+                Id = 11,
+                Nombre = "Macara",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo mnt = new Equipo
+            {
+                Id = 12,
+                Nombre = "Manta",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo tuv = new Equipo
+            {
+                Id = 13,
+                Nombre = "TecnicoUniversitario",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo emc = new Equipo
+            {
+                Id = 14,
+                Nombre = "Emelec",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo del = new Equipo
+            {
+                Id = 15,
+                Nombre = "Delfin",
+                PartidosJugados = 10,
+                PartidosGanados = 8,
+                PartidosEmpatados = 0,
+                PartidosPerdidos = 2
+            };
+            Equipo nac = new Equipo
+            {
+                Id = 16,
+                Nombre = "Nacional",
                 PartidosJugados = 10,
                 PartidosGanados = 8,
                 PartidosEmpatados = 0,
@@ -35,6 +163,20 @@ namespace PilamungaS_Taller.Repositorios
             };
             equipos.Add(bsc);
             equipos.Add(ldu);
+            equipos.Add(cnb);
+            equipos.Add(uct);
+            equipos.Add(inv);
+            equipos.Add(lbt);
+            equipos.Add(dcu);
+            equipos.Add(orn);
+            equipos.Add(msr);
+            equipos.Add(auc);
+            equipos.Add(mca);
+            equipos.Add(mnt);
+            equipos.Add(tuv);
+            equipos.Add(emc);
+            equipos.Add(del);
+            equipos.Add(nac);
             return equipos;
         }
 
@@ -47,7 +189,12 @@ namespace PilamungaS_Taller.Repositorios
 
         public bool ActualizarEquipo(int Id,Equipo equipo)
         {
-            //logica de actualizacion
+            var equipos = DevuelveEquipoPorId(Id);
+            equipos.PartidosGanados = equipo.PartidosGanados;
+            equipos.PartidosJugados = equipo.PartidosJugados;
+            equipos.PartidosEmpatados = equipo.PartidosEmpatados;
+            equipos.PartidosPerdidos= equipo.PartidosPerdidos;
+            
             return true;
         }
     }
