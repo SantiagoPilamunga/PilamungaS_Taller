@@ -23,7 +23,7 @@ namespace PilamungaS_Taller.Controllers
         public ActionResult List()
         {
             
-            var equipos = _repository.DevuelveListadoEquipos();
+            var equipos = _repository.DevuelveListadoEquipos2();
             equipos=equipos.OrderByDescending(item => item.PartidosGanados);
             //equipos = equipos.Where(item => item.Nombre == "Liga de quito");
             return View(equipos);

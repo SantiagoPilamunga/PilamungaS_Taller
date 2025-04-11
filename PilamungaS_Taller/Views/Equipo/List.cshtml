@@ -24,6 +24,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.PartidosPerdidos)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puntos)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -45,9 +48,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PartidosPerdidos)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Puntos)
+                </td>
             <td>
-                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Ver informacion Equipo</a> |
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Ver informacion Equipo</a>
+                
             </td>
         </tr>
 }
