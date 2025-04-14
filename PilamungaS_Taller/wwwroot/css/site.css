@@ -20,3 +20,83 @@ html {
 body {
   margin-bottom: 60px;
 }
+/* Navbar estilizada */      /*Esta parte fue hecha con la ayuda de chat gpt pero se modificaro
+    ciertas cosas como el color o el grosor de algunos contornos para que se vea mas estetico y tenga mas armonia
+*/
+.navbar {
+    background: linear-gradient(to right, #222, #444); /* Degradado oscuro elegante */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    padding: 1rem 0;
+    position: sticky; /* Se queda pegada arriba al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+/* Marca (nombre o logo) */
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffc107 !important;
+    letter-spacing: 1px;
+}
+
+    /* Opcional: cambia el color al pasar el mouse */
+    .navbar-brand:hover {
+        color: #ffda44 !important;
+    }
+
+/* Ítems del navbar si usas más (como enlaces) */
+.navbar-nav .nav-link {
+    color: #f5f5f5 !important;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #ffc107 !important;
+    }
+
+/* Fondo con degradado suave */
+body {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Tonos cálidos pastel */
+    color: #333;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar y footer oscuros para contraste */
+.navbar, .footer {
+    background-color: #222;
+    color: #f5f5f5;
+}
+
+/* Tarjetas con sombra y bordes suaves */
+.card {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    color: #222;
+    border: 4px solid #ffc107;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título dorado */
+.card-title {
+    color: #d4af37;
+}
+.form-control {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    color: #222;
+    border: 3px solid #ffc107;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+/* Botón personalizado */
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+    }
